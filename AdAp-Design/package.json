@@ -1,0 +1,25 @@
+{
+  "name": "AdAp-Design",
+  "version": "0.0.0",
+  "description": "UI & UX Design & Mocking for the AdApp project in AngularJS Course at SoftUni",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Y-LyN-10/AdAp-AngularJS-Course-Project"
+  },
+  "author": "Yulia Tenincheva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Y-LyN-10/AdAp-AngularJS-Course-Project/issues"
+  },
+  "homepage": "https://github.com/Y-LyN-10/AdAp-AngularJS-Course-Project",
+  "dependencies": {
+    "angular": "^1.3.8",
+    "bootstrap": "^3.3.1",
+    "express": "^4.10.7",
+    "noty": "^2.3.4"
+  }
+}
