@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Cars"
+    },
+    {
+        "id": 2,
+        "name": "Electronics"
+    },
+    {
+        "id": 3,
+        "name": "Properties"
+    },
+    {
+        "id": 4,
+        "name": "Jobs"
+    },
+    {
+        "id": 5,
+        "name": "Education"
+    },
+    {
+        "id": 6,
+        "name": "Business"
+    },
+    {
+        "id": 7,
+        "name": "Phones"
+    },
+    {
+        "id": 8,
+        "name": "Sports"
+    },
+    {
+        "id": 9,
+        "name": "Furniture"
+    },
+    {
+        "id": 10,
+        "name": "Gentleman"
+    },
+    {
+        "id": 11,
+        "name": "Others"
+    },
+    {
+        "id": 16,
+        "name": "Ladies"
+    },
+    {
+        "id": 18,
+        "name": "PC/Laptops/Servers"
+    },
+    {
+        "id": 33,
+        "name": "Bikes"
+    },
+    {
+        "id": 39,
+        "name": "laundries"
+    },
+    {
+        "id": 41,
+        "name": "factory mashines"
+    },
+    {
+        "id": 44,
+        "name": "Bottles"
+    },
+    {
+        "id": 49,
+        "name": "Drinks"
+    }
+]

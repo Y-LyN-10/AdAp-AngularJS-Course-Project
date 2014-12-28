@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Sofia"
+    },
+    {
+        "id": 2,
+        "name": "Plovdiv"
+    },
+    {
+        "id": 3,
+        "name": "Varna"
+    },
+    {
+        "id": 4,
+        "name": "Burgas"
+    },
+    {
+        "id": 5,
+        "name": "Ruse"
+    },
+    {
+        "id": 6,
+        "name": "Stara Zagora"
+    },
+    {
+        "id": 7,
+        "name": "Pleven"
+    },
+    {
+        "id": 8,
+        "name": "Sliven"
+    },
+    {
+        "id": 9,
+        "name": "Sarbogazi"
+    },
+    {
+        "id": 10,
+        "name": "Shumen"
+    },
+    {
+        "id": 11,
+        "name": "Yambol"
+    },
+    {
+        "id": 12,
+        "name": "London"
+    },
+    {
+        "id": 13,
+        "name": "Veliko Tarnovo"
+    },
+    {
+        "id": 16,
+        "name": "Kaspichan"
+    },
+    {
+        "id": 19,
+        "name": "Silistra"
+    },
+    {
+        "id": 20,
+        "name": "Filipovci"
+    },
+    {
+        "id": 26,
+        "name": "Compton"
+    },
+    {
+        "id": 27,
+        "name": "vraca"
+    },
+    {
+        "id": 28,
+        "name": "Melnik"
+    },
+    {
+        "id": 29,
+        "name": "Pazardjik"
+    },
+    {
+        "id": 30,
+        "name": "Targovishte"
+    },
+    {
+        "id": 31,
+        "name": "Karnobat"
+    },
+    {
+        "id": 33,
+        "name": "Bankq"
+    },
+    {
+        "id": 34,
+        "name": "Blagoevgrad"
+    },
+    {
+        "id": 35,
+        "name": "Vidin"
+    },
+    {
+        "id": 36,
+        "name": "Varbica"
+    },
+    {
+        "id": 37,
+        "name": "Gabrovo"
+    },
+    {
+        "id": 38,
+        "name": "Godech"
+    },
+    {
+        "id": 39,
+        "name": "Dobrich"
+    },
+    {
+        "id": 40,
+        "name": "Kardjali"
+    },
+    {
+        "id": 41,
+        "name": "Kustendil"
+    },
+    {
+        "id": 42,
+        "name": "Samokov"
+    },
+    {
+        "id": 43,
+        "name": "state Montana"
+    },
+    {
+        "id": 45,
+        "name": "Iambol"
+    },
+    {
+        "id": 47,
+        "name": "Nesebur"
+    }
+]
