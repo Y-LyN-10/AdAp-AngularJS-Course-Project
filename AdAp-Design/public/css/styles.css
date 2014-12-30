@@ -1,13 +1,73 @@
-/*
-Bootstrap 3.1 overrides from http://bootply.com
-
-This CSS code should follow the 'bootstrap.css'
-in your HTML file.
-
-license: MIT
-author: bootply.com
-*/
-
-body {
-  padding-top: 70px;
+.list-panel{
+    margin-bottom: 0 !important;
+    border: 0;
+    border-radius: 0;
 }
+.list-panel li.list-group-item{
+    border-radius: 0;
+    padding-right: 0;
+    word-wrap: break-word;
+}
+
+.badge{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #ddd;
+    padding-right: 25px;
+    max-width: 40px;
+}
+
+.page-content{
+    width: 100%;
+}
+
+.poster{
+    margin: 5px;
+    padding: 0;
+}
+
+.poster .panel-body{
+    padding-top: 0;
+    text-align: justify;
+}
+
+.poster-img-data{
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.poster-main-data-list li.list-group-item{
+    border-radius: 0;
+    word-wrap: break-word;
+    border-right: 0;
+    border-left: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.middle-hr{
+    margin-bottom: 0;
+}
+
+.footer{
+    padding: 0;
+}
+
+.footer>div{
+    padding-left:0;
+}
+
+.footer-text{
+    max-height: 100px;
+    margin-top: 25px;
+}
+
+.footer-ng-logo{
+    margin-top: 25px;
+    max-width: 250px;
+}
+
+.angular-logo{
+    padding: 5px;
+}
+

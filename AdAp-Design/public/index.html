@@ -1,164 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Portal Template</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-	</head>
-	<body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="navbar-header">
-        <a class="navbar-brand" rel="home" href="#">Brand</a>
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		</button>
-	</div>
-	<div class="collapse navbar-collapse">
-		<ul class="nav navbar-nav">
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-		</ul>
-		<div class="col-sm-3 col-md-3 pull-right">
-          <form class="navbar-form" role="search">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-            </div>
-          </form>
-		</div>
-	</div>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AdAp - Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"></button>
+            <a href="/" class="navbar-brand">AdApp</a>
+        </div>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li role="presentation" class="active"><a href="#/">Home</a></li>
+                <li role="presentation"><a href="#/">Home</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Towns <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sofia</a></li>
+                        <li><a href="#">Varna</a></li>
+                        <li><a href="#">Plovdiv</a></li>
+                        <li><a href="#">Ruse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <!--<li><a href="#/logout" id="logout"><span class="glyphicon"></span> Sign Out</a></li>-->
+                <li><a href="#/register">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <div class="container-fluid">
-  
-  <!--left-->
-  <div class="col-sm-3">
-        <h2>Side</h2>
-    	<div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-            Aliquam in felis sit amet augue.</div>
+    <div class="row page-content">
+        <!--left-->
+        <div class="col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Categories</div>
+                <div>
+                    <ul class="list-group list-panel">
+                        <li class="list-group-item"><span class="badge">14</span><a href="#">Cars</a></li>
+                        <li class="list-group-item"><span class="badge">2</span><a href="#">Fashion</a></li>
+                        <li class="list-group-item"><span class="badge">22</span><a href="#">Electronics</a></li>
+                        <li class="list-group-item"><span class="badge">7</span><a href="#">Other</a></li>
+                    </ul>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">Towns</div>
+                <div>
+                    <ul class="list-group list-panel">
+                        <li class="list-group-item"><span class="badge">20</span><a href="#">Sofia</a></li>
+                        <li class="list-group-item"><span class="badge">10</span><a href="#">Varna</a></li>
+                        <li class="list-group-item"><span class="badge">14</span><a href="#">Plovdiv</a></li>
+                        <li class="list-group-item"><span class="badge">1</span><a href="#">Ruse</a></li>
+                    </ul>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
         </div>
-        <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Content here..</div>
-        </div>
-        <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-            Aliquam in felis sit amet augue.</div>
-        </div>
-        <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Content here..</div>
-        </div>
-        <hr>
-  </div><!--/left-->
-  
-  <!--center-->
-  <div class="col-sm-6">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Article Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        <p class="lead"><button class="btn btn-default">Read More</button></p>
-        <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-        <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li></ul>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Article Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        <p class="lead"><button class="btn btn-default">Read More</button></p>
-        <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-        <ul class="list-inline"><li><a href="#">4 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 7 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 56 Shares</a></li></ul>
-      </div>
-    </div>
-    <hr>      
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Article Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-          Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-          dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-          Aliquam in felis sit amet augue.</p>
-        <p class="lead"><button class="btn btn-default">Read More</button></p>
-        <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-        <ul class="list-inline"><li><a href="#">1 Week Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
-      </div>
-    </div>
-    <hr>
-  </div><!--/center-->
+        <!--/left-->
 
-  <!--right-->
-  <div class="col-sm-3">
-        <h2>Side</h2>
-    	<div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-            Aliquam in felis sit amet augue.</div>
+        <!-- center + right -->
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="col-xs-12 panel panel-default poster">
+                        <div class="panel-heading"><strong>Afterschool Bus Driver</strong>
+                            <span class="pull-right">27-Dec-2014</span>
+                        </div>
+
+                        <div class="row poster-img-data">
+                            <div class="col-xs-6">
+                                <img src="img/bus-driver.jpg" class="img-thumbnail"/>
+                            </div>
+                            <div class="col-xs-6 row">
+                                <ul class="list-group poster-main-data-list">
+                                    <li class="list-group-item">
+                                        <strong>Name: </strong>
+                                        <span>Maria</span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <strong>Email: </strong>
+                                        <a href="mailto:maria@gmail.com">maria@gmail.com</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Tel: </strong>
+                                        <span>+359 891 285429</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Driver with D1 license needed ASAP for approximately 2 hours per day, 5
+                                days a week collecting children with a staff member from local schools and dropping back
+                                to
+                                afterschool facility. Occasional weekend work can be offered also.
+                            </p>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- col-xs-4-->
+                <div class="col-xs-4">
+                    <div class="col-xs-12 panel panel-default poster">
+                        <div class="panel-heading"><strong>Afterschool Bus Driver</strong>
+                            <span class="pull-right">27-Dec-2014</span>
+                        </div>
+
+                        <div class="row poster-img-data">
+                            <div class="col-xs-6">
+                                <img src="img/bus-driver.jpg" class="img-thumbnail"/>
+                            </div>
+                            <div class="col-xs-6 row">
+                                <ul class="list-group poster-main-data-list">
+                                    <li class="list-group-item">
+                                        <strong>Name: </strong>
+                                        <span>Maria</span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <strong>Email: </strong>
+                                        <a href="mailto:maria@gmail.com">maria@gmail.com</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Tel: </strong>
+                                        <span>+359 891 285429</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Driver with D1 license needed ASAP for approximately 2 hours per day, 5
+                                days a week collecting children with a staff member from local schools and dropping back
+                                to
+                                afterschool facility. Occasional weekend work can be offered also.
+                            </p>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- col-xs-4 -->
+                <div class="col-xs-4">
+                    <div class="col-xs-12 panel panel-default poster">
+                        <div class="panel-heading"><strong>Afterschool Bus Driver</strong>
+                            <span class="pull-right">27-Dec-2014</span>
+                        </div>
+
+                        <div class="row poster-img-data">
+                            <div class="col-xs-6">
+                                <img src="img/bus-driver.jpg" class="img-thumbnail"/>
+                            </div>
+                            <div class="col-xs-6 row">
+                                <ul class="list-group poster-main-data-list">
+                                    <li class="list-group-item">
+                                        <strong>Name: </strong>
+                                        <span>Maria</span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <strong>Email: </strong>
+                                        <a href="mailto:maria@gmail.com">maria@gmail.com</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Tel: </strong>
+                                        <span>+359 891 285429</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Driver with D1 license needed ASAP for approximately 2 hours per day, 5
+                                days a week collecting children with a staff member from local schools and dropping back
+                                to
+                                afterschool facility. Occasional weekend work can be offered also.
+                            </p>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- col-xs-4 -->
+            </div>
+            <!-- row -->
+            <hr class="middle-hr">
+            <!--pagination-->
+            <div class="row text-center">
+                <nav>
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+        <!--/center + right -->
         <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Content here..</div>
+    </div>
+    <div class="row panel-footer footer">
+            <div class="col-xs-4">
+                <img src="img/github-fork-me.png" alt=""/>
+            </div>
+            <div class="col-xs-4 footer-text">
+                <div class="text-center">
+                <p><strong>AdAp</strong>ted to your needs with AngularJS.</p>
+                <p><strong>Author: </strong>Yulia Tenincheva</p>
+                </div>
+            </div>
+            <div class="col-xs-4 footer-ng-logo pull-right">
+                <img src="img/angularjs-logo-small.png" class="img-responsive" alt=""/>
+            </div>
         </div>
-        <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-            Aliquam in felis sit amet augue.</div>
-        </div>
-        <hr>
-        <div class="panel panel-default">
-         	<div class="panel-heading">Title</div>
-         	<div class="panel-body">Content here..</div>
-        </div>
-        <hr>
-  </div><!--/right-->
-  <hr>
-</div><!--/container-fluid-->
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
+    </div>
+</div>
+<!--/container-fluid-->
+
+<!-- script references -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>
