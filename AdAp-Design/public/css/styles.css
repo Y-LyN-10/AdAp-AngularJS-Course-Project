@@ -1,3 +1,7 @@
+body {
+    background-color: #e7e7e7;
+}
+
 .navbar-brand{
     padding: 0;
     padding-left: 5px;
@@ -18,7 +22,8 @@
 .badge{
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    background-color: #ddd;
+    background-color: #eee;
+    color: #a9a9a9;
     padding-right: 25px;
     max-width: 40px;
 }
@@ -93,4 +98,12 @@
 
 .left-col-btn>a{
     margin-top:15px;
+}
+
+.low-opacity{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-dialog{
+    left: 0%;
 }

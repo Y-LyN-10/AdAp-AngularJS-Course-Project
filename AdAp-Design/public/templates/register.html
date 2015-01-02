@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AdAp - Register</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/signin.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"></button>
+            <a href="/" class="navbar-brand"><img src="../img/adap-logo-small.png" alt=""/></a>
+        </div>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li role="presentation" class="active"><a href="#/">Home</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Towns <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sofia</a></li>
+                        <li><a href="#">Varna</a></li>
+                        <li><a href="#">Plovdiv</a></li>
+                        <li><a href="#">Ruse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#/logout" id="logout" class="hidden">Sign Out</a></li>
+                <li><a href="#/register">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="signin-container row">
+        <!--register modal-->
+        <div id="registerModal" class="center-block show" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content col-md-12">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h1 class="text-center">Register</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form center-block">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Username">
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control input-lg" placeholder="Password">
+                                </div>
+                                <div class="form-group ">
+                                    <input type="password" class="form-control input-lg" placeholder="Confirm Password">
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <select class="form-control input-lg">
+                                        <option value="Sofia">Sofia</option>
+                                        <option value="Varna">Varna</option>
+                                        <option value="Plovdiv">Plovdiv</option>
+                                        <option value="Ruse">Ruse</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                                </div>
+                            </div>
+                           <h1></h1>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            <span class="text-center"><a href="#" class="pull-left hidden">Login here</a></span>
+                            <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>  <!-- /modal-dialog-->
+        </div> <!-- /id=registerModal-->
+    </div> <!-- /SignIn Container -->
+</div>  <!-- Container Fluid-->
+
+<div class="row panel-footer footer navbar-fixed-bottom">
+    <div class="col-xs-12 footer-text">
+        <div class="text-center">
+            <p><strong>AdAp</strong>ted to your needs with AngularJS. <strong>Author: </strong>Yulia Tenincheva</p>
+        </div>
+    </div>
+</div>
+<!--/container-fluid-->
+
+<!-- script references -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
