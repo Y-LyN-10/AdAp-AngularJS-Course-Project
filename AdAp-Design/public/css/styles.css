@@ -1,3 +1,9 @@
+.navbar-brand{
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .list-panel{
     margin-bottom: 0 !important;
     border: 0;
@@ -21,19 +27,29 @@
     width: 100%;
 }
 
+.poster-block{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 0;
+}
+
 .poster{
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 
-.poster .panel-body{
+.poster > .glyphicon{
+    margin: 5px;
+}
+
+.poster>.panel-body{
     padding-top: 0;
     text-align: justify;
 }
 
 .poster-img-data{
     margin-left: 0;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .poster-main-data-list li.list-group-item{
@@ -41,8 +57,8 @@
     word-wrap: break-word;
     border-right: 0;
     border-left: 0;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .middle-hr{
@@ -71,3 +87,10 @@
     padding: 5px;
 }
 
+.change-ad-status>a{
+    min-width: 150px;
+}
+
+.left-col-btn>a{
+    margin-top:15px;
+}
