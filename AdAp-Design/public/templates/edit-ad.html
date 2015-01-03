@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AdAp - Home</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"></button>
+            <a href="/" class="navbar-brand"><img src="../img/adap-logo-small.png" alt=""/></a>
+        </div>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li role="presentation"><a href="#/">Home</a></li>
+                <li role="presentation"><a href="#/">My Ads</a></li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Towns <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sofia</a></li>
+                        <li><a href="#">Varna</a></li>
+                        <li><a href="#">Plovdiv</a></li>
+                        <li><a href="#">Ruse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#/logout" id="logout" class="hidden">Sign Out</a></li>
+                <li><a href="#/register">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row page-content">
+
+        <!-- center + right -->
+        <div class="row poster-publish">
+            <div class="col-xs-12">
+                <div class="col-xs-12 panel panel-default poster">
+                    <a href="#" class="btn btn-sm btn-lg glyphicon glyphicon-remove pull-right"></a>
+
+                    <div class="panel-heading"><strong>Edit Ad</strong></div>
+                    <div class="panel-body">
+                        <form class="form center-block panel-body" role="dialog">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="form-control input-lg" id="title" placeholder="{{Title}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Description:</label>
+                                    <textarea class="form-control input-lg" rows="5" id="text"
+                                              placeholder="{{Description}}"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="img-path">Image:</label>
+                                    <div class="image-container container">
+                                        <img src="../img/bus-driver.jpg" class="img-responsive img-thumbnail" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row panel-body">
+                                <div class="col-md-12">
+                                    <label for="upl-image">Image:</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-lg" id="img-path" placeholder="{{path}}">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-lg" type="button" id="upl-image">Browse...</button>
+                                            <button class="btn btn-warning btn-lg" type="button" id="upd-image">
+                                                <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                                            </button>
+                                            <button class="btn btn-danger btn-lg" type="button" id="del-image">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row panel-body">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="select-town">Select town:</label>
+                                        <select class="form-control input-lg" id="select-town">
+                                            <option value="{{id}}">Sofia</option>
+                                            <option value="{{id}}">Varna</option>
+                                            <option value="{{id}}" selected>Plovdiv</option>
+                                            <option value="{{id}}">Ruse</option>
+                                            <option value="{{id}}">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="select-category">Select category:</label>
+                                        <select class="form-control input-lg" id="select-category">
+                                            <option value="{{id}}">Cars</option>
+                                            <option value="{{id}}">Fashion</option>
+                                            <option value="{{id}}">Electronics</option>
+                                            <option value="{{id}}">Services</option>
+                                            <option value="{{id}}">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- select options for town and category-->
+                            <div class="row panel-body">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /SignIn Container -->
+        </div>
+    </div>
+    <!-- row -->
+    <hr class="middle-hr">
+</div>
+<!--/center + right -->
+<hr>
+</div>
+<div class="row panel-footer footer">
+    <div class="col-xs-4">
+        <a href="https://github.com/Y-LyN-10/AdAp-AngularJS-Course-Project">
+            <img src="../img/github-fork-me.png" alt=""/>
+        </a>
+    </div>
+    <div class="col-xs-4 footer-text">
+        <div class="text-center">
+            <p><strong>AdAp</strong>ted to your needs with AngularJS.</p>
+
+            <p><strong>Author: </strong>Yulia Tenincheva</p>
+        </div>
+    </div>
+    <div class="col-xs-4 footer-ng-logo pull-right">
+        <img src="../img/angularjs-logo-small.png" class="img-responsive" alt=""/>
+    </div>
+</div>
+</div>
+</div>
+<!--/container-fluid-->
+
+<!-- script references -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
