@@ -15,20 +15,20 @@
 <body>
 
 <header id="app-header">
-    <div ng-include="'app/shared/header.html'"></div>
+    <div ng-include="'app/common/views/header.html'"></div>
 </header>
 
 <div class="container-fluid">
     <div class="row page-content" ng-view></div>
 
     <header id="app-footer">
-        <div ng-include="'app/shared/footer.html'"></div>
+        <div ng-include="'app/common/views/footer.html'"></div>
     </header>
 </div>
 <!-- lib scripts-->
 <script src="assets/lib/angular/angular.js" type="application/javascript"></script>
-<script src="assets/lib/angular/angular-resource.js" type="application/javascript"></script>
 <script src="assets/lib/angular/angular-route.js" type="application/javascript"></script>
+<script src="assets/lib/angular/angular-resource.js" type="application/javascript"></script>
 <script src="assets/lib/jquery/jquery-2.1.3.js" type="application/javascript"></script>
 <script src="assets/lib/jquery.noty/jquery.noty.js" type="application/javascript"></script>
 <script src="assets/lib/bootstrap/bootstrap-3.1.1.js" type="application/javascript"></script>
@@ -38,9 +38,12 @@
 <script src="app/app.js" type="application/javascript"></script>
 
 <!-- controllers -->
-<script src="app/shared/controllers/AppController.js"></script>
-<script src="app/shared/controllers/HomeController.js"></script>
-<script src="app/components/public/controllers/LoginController.js"></script>
-<script src="app/components/public/controllers/RegisterController.js"></script>
+<script src="app/common/controllers/AppController.js"></script>
+<script src="app/common/controllers/HomeController.js"></script>
+<script src="app/account/controllers/LoginController.js"></script>
+<script src="app/account/controllers/RegisterController.js"></script>
+
+<!-- services -->
+<script src="app/account/services/AuthService.js"></script>
 </body>
 </html>

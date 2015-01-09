@@ -2,20 +2,23 @@
 
 var app = angular.module('app', ['ngRoute', 'ngResource']);
 
+app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
+app.constant('pageSize', 3);
+
 app.config(function ($routeProvider) {
 
     $routeProvider.when('/', {
-        templateUrl: 'app/shared/home.html',
+        templateUrl: 'app/common/views/home.html',
         controller: 'HomeController'
     });
 
     $routeProvider.when('/login', {
-        templateUrl: 'app/components/public/views/login.html',
+        templateUrl: 'app/account/views/login.html',
         controller: 'LoginController'
     });
 
     $routeProvider.when('/register', {
-        templateUrl: 'app/components/public/views/register.html',
+        templateUrl: 'app/account/views/register.html',
         controller: 'RegisterController'
     });
 
