@@ -1,0 +1,23 @@
+<!-- Town -->
+<div class="panel panel-default panel-sidebar">
+    <div class="panel-heading">Towns</div>
+    <div>
+        <ul class="list-group list-panel">
+            <li class="list-group-item"
+                ng-class="{'selected' : selectedTownId == null}"
+                ng-click="townClicked(null)">
+                <span class="badge">{{towns.length}}</span>
+                All
+            </li>
+            <li class="list-group-item"
+                ng-repeat="town in towns"
+                ng-click="townClicked(town.id)"
+                ng-class="{'selected' : selectedTownId == town.id}">
+                <span class="badge">...</span>
+                {{town.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="panel-footer"></div>
+</div>
+<!--/ Towns -->

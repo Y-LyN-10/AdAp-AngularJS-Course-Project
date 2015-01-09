@@ -1,0 +1,23 @@
+<!--Categories-->
+<div class="panel panel-default panel-sidebar">
+    <div class="panel-heading">Categories</div>
+    <div>
+        <ul class="list-group list-panel">
+            <li class="list-group-item"
+                ng-class="{'selected' : selectedCategoryId == null}"
+                ng-click="categoryClicked(null)">
+                <span class="badge">{{categories.length}}</span>
+                All
+            </li>
+            <li class="list-group-item"
+                ng-repeat="category in categories"
+                ng-click="categoryClicked(category.id)"
+                ng-class="{'selected' : selectedCategoryId == category.id}">
+                <span class="badge">...</span>
+                {{category.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="panel-footer"></div>
+</div>
+<!-- /Categories-->

@@ -3,10 +3,9 @@
 var app = angular.module('app', ['ngRoute', 'ngResource']);
 
 app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
-app.constant('pageSize', 3);
+//app.constant('pageSize', 3);
 
 app.config(function ($routeProvider) {
-
     $routeProvider.when('/', {
         templateUrl: 'app/common/views/home.html',
         controller: 'HomeController'
