@@ -42,13 +42,15 @@ body {
     right: 0;
 }
 
-.poster-block{
-    max-width: 500px;
-    padding-left: 5px;
+.center-container{
+    /*width: 100%;*/
 }
-
 .panel-sidebar{
     min-width: 150px;
+}
+
+.poster-block{
+    max-width: 500px;
 }
 
 .poster{
@@ -68,6 +70,7 @@ body {
 
 .poster-img-data{
     margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
 }
 
