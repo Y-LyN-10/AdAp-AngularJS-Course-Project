@@ -1,0 +1,20 @@
+body {
+    background-color: #e7e7e7;
+}
+
+.modal-dialog{
+    left: auto;
+    max-width: 600px;
+    margin-right: auto;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+.signin-container{
+    margin-left: -10px;
+    margin-right: -30px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
