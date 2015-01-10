@@ -1,0 +1,38 @@
+<div>
+    <div class="row">
+        <div class="col-sm-6 poster-block center-block" ng-repeat="ad in ads.ads">
+            <div class="panel panel-default poster" data-id="{{ad.id}}">
+               <div class="panel-heading"><strong>{{ad.title}}</strong></div>
+               <div class="row poster-img-data">
+                    <div class="col-sm-6 col-xs-12" ng-if='ad.imageDataUrl'>
+                        <img ng-src="{{ad.imageDataUrl}}" class="img-thumbnail"/>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <ul class="list-group poster-main-data-list">
+                            <li class="list-group-item">
+                                <strong>Name: </strong>
+                                <span>{{ad.ownerName}}</span>
+                            </li>
+
+                            <li class="list-group-item">
+                                <strong>Email: </strong>
+                                <a href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Tel: </strong>
+                                <span>{{ad.ownerPhone}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>{{ad.text}}</p>
+                    <span class="pull-right" style="margin-top: 7px;"><strong>Published on:</strong>{{ad.date | date:'dd-MMM-yyyy'}}</span>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-default hidden">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

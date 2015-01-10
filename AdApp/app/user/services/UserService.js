@@ -2,7 +2,7 @@
 
 app.factory('userService',
     function ($resource, baseServiceUrl) {
-        var adsResource = $resource(
+        var userResource = $resource(
                 baseServiceUrl + '/api/user/Profile',
             null,
             {
@@ -12,7 +12,7 @@ app.factory('userService',
 
         return {
             getFullUserData: function(params, success, error) {
-                return adsResource.getAll(params, success, error);
+                return userResource.getAll(params, success, error);
             }
         }
     }
