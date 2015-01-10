@@ -56,6 +56,24 @@ app.factory('authService',
                 }
             },
 
+            getAdminPermission: function (data, success, error) {
+                var currentUser = this.getCurrentUser();
+                var ifPermissionPassed = false;
+
+                if((currentUser != undefined) && (currentUser.isAdmin)){
+                    ifPermissionPassed = true;
+                }
+
+                if (!ifPermissionPassed) {
+                    $location.path('/forbidden');
+                    $rootScope.$on('$locationChangeSuccess', function (next, current) {
+                        return false;
+                    });
+                } else {
+                    return true;
+                }
+            },
+
             isAnonymous : function() {
                 return sessionStorage['currentUser'] == undefined;
             },

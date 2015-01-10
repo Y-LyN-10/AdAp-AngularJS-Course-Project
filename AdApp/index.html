@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css.map"/>
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css"/>
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css.map"/>
+
+    <!--Kendo CSS-->
+    <link rel="stylesheet" href="//cdn.kendostatic.com/2014.1.416/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="//cdn.kendostatic.com/2014.1.416/styles/kendo.silver.min.css">
+
+    <!--My CSS-->
     <link rel="stylesheet" href="assets/css/app-styles.css"/>
     <link rel="stylesheet" href="assets/css/signin.css"/>
 </head>
@@ -26,13 +32,21 @@
     </header>
 </div>
 <!-- lib scripts-->
-<script src="assets/lib/angular/angular.js" type="application/javascript"></script>
-<script src="assets/lib/angular/angular-route.js" type="application/javascript"></script>
+
+<!--<script src="assets/lib/jquery/jquery-2.1.3.js" type="application/javascript"></script>-->
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//cdn.kendostatic.com/2014.1.416/js/kendo.all.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+
+<!--<script src="assets/lib/angular/angular.js" type="application/javascript"></script>-->
+<!--<script src="assets/lib/angular/angular-route.js" type="application/javascript"></script>-->
 <script src="assets/lib/angular/angular-resource.js" type="application/javascript"></script>
-<script src="assets/lib/jquery/jquery-2.1.3.js" type="application/javascript"></script>
 <script src="assets/lib/jquery.noty/jquery.noty.js" type="application/javascript"></script>
 <script src="assets/lib/bootstrap/bootstrap-3.1.1.js" type="application/javascript"></script>
 <script src="assets/lib/ui.bootstrap/ui.bootstrap.pagination-0.12.0.js" type="application/javascript"></script>
+<!--<script src="assets/lib/ui.kendo/kendo.all.min.js" type="application/javascript"></script>-->
+<script src="assets/lib/angular-kendo/angular-kendo.js" type="application/javascript"></script>
 
 <!-- my scripts-->
 <script src="app/app.js" type="application/javascript"></script>
@@ -48,6 +62,8 @@
 <script src="app/user/controllers/UserAdsController.js"></script>
 <script src="app/user/controllers/UserProfileController.js"></script>
 
+<script src="app/admin/controllers/AdminUsersGridController.js"></script>
+
 <!-- services -->
 <script src="app/account/services/AuthService.js"></script>
 
@@ -56,5 +72,6 @@
 <script src="app/common/services/TownsService.js"></script>
 
 <script src="app/user/services/UserService.js"></script>
+<script src="app/admin/services/AdminService.js"></script>
 </body>
 </html>

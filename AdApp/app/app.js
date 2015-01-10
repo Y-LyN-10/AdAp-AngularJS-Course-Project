@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ['ngRoute', 'ngResource']);
+var app = angular.module('app', ['ngRoute', 'ngResource', 'kendo.directives']);
 
 app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
 app.constant('pageSize', 6);
@@ -71,6 +71,14 @@ app.config(function ($routeProvider) {
             resolve: {
                 permission: function(authService, $route) {
                     return authService.getPermission();
+                }
+            }
+        })
+        .when('/admin/users/', {
+            templateUrl: 'app/admin/views/list-users.html',
+            resolve: {
+                permission: function(authService, $route) {
+                    return authService.getAdminPermission();
                 }
             }
         })
