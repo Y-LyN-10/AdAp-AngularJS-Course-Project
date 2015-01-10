@@ -41,11 +41,14 @@
             <!--<button class="btn btn-default">Read More</button>-->
         <!--</div>-->
     <!--</div>-->
-<div ng-if="usrAds.ads.length==0">
-    No ads found.
+<div ng-if="ads.ads.length==0">
+    <div style="height:100px;"></div>
+    <h3 class="text-center">You have not published any ads.</h3>
+    <h3 class="text-center">Publish now!</h3>
+    <div style="height:100px;"></div>
 </div>
 
-<div class="col-sm-6 poster-block center-block" ng-repeat="ad in usrAds.ads">
+<div class="col-sm-6 poster-block center-block" ng-repeat="ad in ads.ads">
     <div class="panel panel-default poster" data-id="{{ad.id}}">
         <div class="panel-heading"><strong>{{ad.title}}</strong></div>
         <div class="row poster-img-data">
@@ -79,4 +82,3 @@
         </div>
     </div>
 </div>
-        <h1>{{userAds}}</h1>

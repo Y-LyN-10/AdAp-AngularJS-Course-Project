@@ -1,18 +1,24 @@
 'use strict';
 
 app.factory('userService',
-    function ($resource, authService, baseServiceUrl) {
-        var userResource = $resource(
-                baseServiceUrl + '/api/user/Profile',
-            null,
-            {
-                'getAll': {method: 'GET'}
-            }
-        );
-
+    function ($resource, $http, authService, baseServiceUrl) {
         return {
-            getFullUserData: function (params, success, error) {
-                return userResource.getAll(params, success, error);
+            getUserInfo : function (success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/profile',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+            getUserAds: function (params, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/ads',
+                    headers: authService.getAuthHeaders(),
+                    params: params
+                };
+                $http(request).success(success).error(error);
             }
         }
     }

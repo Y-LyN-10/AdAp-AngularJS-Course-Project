@@ -6,10 +6,6 @@ app.controller('HomeController',
             'startPage': 1,
             'pageSize': pageSize
         };
-        $scope.userAdsParams = {
-            'startPage': 1,
-            'pageSize':  pageSize
-        };
 
         $scope.reloadAds = function () {
             adsService.getAds(
@@ -23,21 +19,7 @@ app.controller('HomeController',
             );
         };
 
-        $scope.loadUserAds = function() {
-            adsService.getUserAds(
-                $scope.userAdsParams,
-                function success(data) {
-                    console.log(data);
-                    $scope.userAds = data;
-                },
-                function error(err) {
-                    console.log("Cannot load ads", err);
-                }
-            );
-        };
-
         $scope.reloadAds();
-        $scope.loadUserAds();
 
         $scope.$on("categorySelectionChanged", function (event, selectedCategoryId) {
             $scope.adsParams.categoryId = selectedCategoryId;

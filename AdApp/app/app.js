@@ -51,7 +51,7 @@ app.config(function ($routeProvider) {
         })
         .when('/user/ads', {
             templateUrl: 'app/user/views/my-ads.html',
-            controller: 'HomeController',
+            controller: 'UserAdsController',
             resolve: {
                 permission: function(authService, $route) {
                     return authService.getPermission();
