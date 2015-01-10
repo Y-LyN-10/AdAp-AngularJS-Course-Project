@@ -7,6 +7,16 @@
         <div id="navbar-menu" class="collapse navbar-collapse" ng-controller="SidebarController">
             <ul class="nav navbar-nav">
                 <li role="presentation"><a href="#/">Home</a></li>
+                <!-- For non-admin users only -->
+                <li ng-if="authService.isRegularUser()"><a href="#/user/ads">My Ads</a></li>
+                <li ng-if="authService.isRegularUser()"><a href="#/user/ads/publish">Publish New Ad</a></li>
+                <!--/ Navigation for users -->
+                <!--For admins-->
+                <li ng-if="authService.isAdmin()"><a href="#/admin/ads">Ads</a></li>
+                <li ng-if="authService.isAdmin()"><a href="#/admin/users">Users</a></li>
+                <li ng-if="authService.isAdmin()"><a href="#/admin/categories">Categories</a></li>
+                <li ng-if="authService.isAdmin()"><a href="#/admin/towns">Towns</a></li>
+                <!-- / For admins-->
                 <li><a href="" class="dropdown-toggle visible-xs visible-sm hidden-md hidden-lg" data-toggle="dropdown">Categories<b class="caret"></b></a>
                     <ul class="dropdown-menu dropdown-list">
                         <li class="dropdown-list-item"
@@ -39,8 +49,20 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
-                <li><a href="#/logout" id="logout" class="hidden">Sign Out</a></li>
-                <li><a href="#/register">Sign In</a></li>
+                <!-- Sign In/Up for anonymous site visitors  -->
+                <li ng-if="authService.isAnonymous()">
+                    <a href="#/login" class="button">Sign In</a>
+                </li>
+
+                <!-- Welcome msg for non-admin users -->
+                <li ng-if="authService.isRegularUser()">
+                    <a href="#/user/profile">Welcome, {{authService.getCurrentUser().username}}!</a>
+                </li>
+
+                <!-- Sign out for logged in users -->
+                <li ng-if="authService.isLoggedIn()">
+                   <a href="#/" ng-click="logout()">Logout</a>
+                </li>
             </ul>
         </div>
     </div>

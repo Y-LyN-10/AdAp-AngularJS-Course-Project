@@ -46,7 +46,7 @@ app.factory('authService',
                 return sessionStorage['currentUser'] != undefined;
             },
 
-            isNormalUser : function() {
+            isRegularUser : function() {
                 var currentUser = this.getCurrentUser();
                 return (currentUser != undefined) && (!currentUser.isAdmin);
             },
