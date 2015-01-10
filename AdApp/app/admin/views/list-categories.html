@@ -1,0 +1,19 @@
+<div ng-controller="AdminListsController">
+    <div class="center-block" style="max-width: 600px;">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td class="heading" width="100px">Id</td>
+                <td class="heading">Category</td>
+                <td class="heading" width="100px">Action</td>
+            </tr>
+            <tr ng-repeat="category in categories.categories">
+                <td>{{category.id}}</td>
+                <td>{{category.username}}</td>
+                <td class="text-center">
+                    <a href="#" class="btn btn-sm btn-warning glyphicon glyphicon-pencil"></a>
+                    <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-remove"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

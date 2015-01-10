@@ -165,3 +165,7 @@ body {
 .low-opacity{
     background-color: rgba(255, 255, 255, 0.7);
 }
+
+.table{
+    background-color: #ffffff;
+}

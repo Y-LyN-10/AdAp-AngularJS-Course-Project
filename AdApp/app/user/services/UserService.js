@@ -1,7 +1,7 @@
 'use strict';
 
 app.factory('userService',
-    function ($resource, $http, authService, baseServiceUrl) {
+    function ($http, authService, baseServiceUrl) {
         return {
             getUserInfo : function (success, error) {
                 var request = {

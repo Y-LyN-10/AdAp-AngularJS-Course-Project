@@ -1,3 +1,23 @@
-<div ng-controller="AdminUsersGridController">
-    
+<div ng-controller="AdminListsController">
+    <div class="center-block" style="max-width: 1200px;">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td class="heading">Username</td>
+                <td class="heading">Name</td>
+                <td class="heading">Email</td>
+                <td class="heading">Phone</td>
+                <td class="heading">Action</td>
+            </tr>
+            <tr ng-repeat="user in users.users">
+                <td>{{user.username}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phoneNumber}}</td>
+                <td class="text-center">
+                    <a href="#" class="btn btn-sm btn-warning glyphicon glyphicon-pencil"></a>
+                    <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-remove"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
