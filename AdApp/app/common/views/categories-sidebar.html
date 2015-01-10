@@ -6,14 +6,15 @@
             <li class="list-group-item"
                 ng-class="{'selected' : selectedCategoryId == null}"
                 ng-click="categoryClicked(null)">
-                <span class="badge">{{categories.length}}</span>
+                <span class="badge">{{ads.numItems}}</span>
                 All
             </li>
             <li class="list-group-item"
                 ng-repeat="category in categories"
                 ng-click="categoryClicked(category.id)"
                 ng-class="{'selected' : selectedCategoryId == category.id}">
-                <span class="badge">...</span>
+                <span ng-repeat="ads in filteredAds = (ads.ads | filter:category.id)"></span>
+                <span class="badge">{{filteredAds.length}}</span>
                 {{category.name}}
             </li>
         </ul>

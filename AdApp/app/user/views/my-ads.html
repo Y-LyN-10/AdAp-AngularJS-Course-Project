@@ -1,0 +1,82 @@
+<!--<div class="col-xs-4 poster-block">-->
+    <!--<div class="col-xs-12 panel panel-default poster">-->
+        <!--<a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-remove pull-right"></a>-->
+        <!--<a href="#" class="btn btn-sm btn-warning glyphicon glyphicon-pencil pull-right"></a>-->
+
+        <!--<div class="panel-heading"><strong>User's Own Ad View - Title</strong></div>-->
+
+        <!--<div class="row poster-img-data">-->
+            <!--<div class="col-xs-6">-->
+                <!--<img src="../../../assets/img/bus-driver.jpg" class="img-thumbnail"/>-->
+            <!--</div>-->
+            <!--<div class="col-xs-6 row">-->
+                <!--<ul class="list-group poster-main-data-list">-->
+                    <!--<li class="list-group-item">-->
+                        <!--<strong>Category: </strong>-->
+                        <!--<span>Other</span>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<strong>Town: </strong>-->
+                        <!--<span>Plovdiv</span>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<strong>Status: </strong>-->
+                        <!--<span>Approved</span>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item  change-ad-status">-->
+                        <!--<a href="#" class="btn btn-success center-block disabled"><span-->
+                                <!--class=" glyphicon glyphicon-repeat"> Re-Publish</span></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="panel-body">-->
+            <!--<p>Driver with D1 license needed ASAP for approximately 2 hours per day, 5-->
+                <!--days a week collecting children with a staff member from local schools and dropping back-->
+                <!--to afterschool facility. Occasional weekend work can be offered also.-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="panel-footer">-->
+            <!--<span class="pull-right" style="margin-top: 7px;"><strong>Published on:</strong> 27-Dec-2014</span>-->
+            <!--<button class="btn btn-default">Read More</button>-->
+        <!--</div>-->
+    <!--</div>-->
+<div ng-if="usrAds.ads.length==0">
+    No ads found.
+</div>
+
+<div class="col-sm-6 poster-block center-block" ng-repeat="ad in usrAds.ads">
+    <div class="panel panel-default poster" data-id="{{ad.id}}">
+        <div class="panel-heading"><strong>{{ad.title}}</strong></div>
+        <div class="row poster-img-data">
+            <div class="col-sm-6 col-xs-12" ng-if='ad.imageDataUrl'>
+                <img ng-src="{{ad.imageDataUrl}}" class="img-thumbnail"/>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <ul class="list-group poster-main-data-list">
+                    <li class="list-group-item">
+                        <strong>Name: </strong>
+                        <span>{{ad.ownerName}}</span>
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Email: </strong>
+                        <a href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Tel: </strong>
+                        <span>{{ad.ownerPhone}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel-body">
+            <p>{{ad.text}}</p>
+            <span class="pull-right" style="margin-top: 7px;"><strong>Published on:</strong>{{ad.date | date:'dd-MMM-yyyy'}}</span>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-default hidden">Read More</button>
+        </div>
+    </div>
+</div>
+        <h1>{{userAds}}</h1>

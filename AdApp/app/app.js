@@ -3,7 +3,7 @@
 var app = angular.module('app', ['ngRoute', 'ngResource']);
 
 app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
-app.constant('pageSize', 4);
+app.constant('pageSize', 6);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -48,6 +48,31 @@ app.config(function ($routeProvider) {
         })
         .when('/user', {
             redirectTo: '/user/profile'
+        })
+        .when('/user/ads', {
+            templateUrl: 'app/user/views/my-ads.html',
+            controller: 'HomeController',
+            resolve: {
+                permission: function(authService, $route) {
+                    return authService.getPermission();
+                }
+            }
+        })
+        .when('/user/ads/publish', {
+            templateUrl: 'app/user/views/add-ad.html',
+            resolve: {
+                permission: function(authService, $route) {
+                    return authService.getPermission();
+                }
+            }
+        })
+        .when('/user/ads/edit/:id', {
+            templateUrl: 'app/user/views/edit-ad.html',
+            resolve: {
+                permission: function(authService, $route) {
+                    return authService.getPermission();
+                }
+            }
         })
         .when('/forbidden',{
             templateUrl: 'app/common/views/unauthorized-access.html'
