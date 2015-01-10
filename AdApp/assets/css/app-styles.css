@@ -8,6 +8,33 @@ body {
     padding-right: 5px;
 }
 
+.dropdown-list{
+    max-height: 450px;
+    overflow-y: scroll;
+}
+
+.dropdown-list-item{
+    line-height: 1em;
+    margin-bottom: 2px;
+    padding: 5px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.dropdown-list-item:first-of-type{
+    margin-top: -5px;
+}
+
+.dropdown-list-item:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.dropdown-list > .selected{
+    background-color: #eee;
+    cursor: pointer;
+}
+
 .list-panel{
     margin-bottom: 0 !important;
     border: 0;
@@ -17,6 +44,25 @@ body {
     border-radius: 0;
     padding-right: 0;
     word-wrap: break-word;
+}
+
+.list-panel li.list-group-item:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.list-panel>.selected{
+    background-color: #eee;
+    cursor: none;
+}
+
+.list-panel li.list-group-item:hover>.badge{
+    background-color: #fff;
+}
+
+.list-panel>.selected>.badge{
+    background-color: #fff;
+    cursor: none;
 }
 
 .badge{
