@@ -169,3 +169,12 @@ body {
 .table{
     background-color: #ffffff;
 }
+
+.table>tr{
+    word-wrap: break-word;
+    overflow: hidden;
+ }
+
+.table>tr>td{
+    max-width: 250px;
+}

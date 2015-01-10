@@ -10,8 +10,8 @@
                 <td>{{category.id}}</td>
                 <td>{{category.username}}</td>
                 <td class="text-center">
-                    <a href="#" class="btn btn-sm btn-warning glyphicon glyphicon-pencil"></a>
-                    <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-remove"></a>
+                    <a href="#/admin/categories/{{category.id}}" class="btn btn-sm btn-warning glyphicon glyphicon-pencil"></a>
+                    <a type="button" ng-click="deleteCategory(category.id);" class="btn btn-sm btn-danger glyphicon glyphicon-remove"></a>
                 </td>
             </tr>
         </table>
