@@ -6,22 +6,53 @@ app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
 //app.constant('pageSize', 3);
 
 app.config(function ($routeProvider) {
-    $routeProvider.when('/', {
-        templateUrl: 'app/common/views/home.html',
-        controller: 'HomeController'
-    });
+    $routeProvider
+        .when('/', {
+            templateUrl: 'app/common/views/home.html',
+            controller: 'HomeController'
+        })
+        .when('/login', {
+            templateUrl: 'app/account/views/login.html',
+            controller: 'LoginController',
+            resolve: {
+                permission: function (authService) {
+                    if(authService.isLoggedIn){
+                        authService.logout();
+                    }
 
-    $routeProvider.when('/login', {
-        templateUrl: 'app/account/views/login.html',
-        controller: 'LoginController'
-    });
+                    return true;
+                }
+            }
+        })
+        .when('/register', {
+            templateUrl: 'app/account/views/register.html',
+            controller: 'RegisterController',
+            resolve: {
+                permission: function (authService) {
+                    if(authService.isLoggedIn){
+                       authService.logout();
+                    }
 
-    $routeProvider.when('/register', {
-        templateUrl: 'app/account/views/register.html',
-        controller: 'RegisterController'
-    });
-
-    $routeProvider.otherwise(
-        { redirectTo: '/' }
-    );
+                    return true;
+                }
+            }
+        })
+        .when('/user/profile', {
+            templateUrl: 'app/user/views/profile.html',
+            controller: 'UserController',
+            resolve: {
+                permission: function(authService, $route) {
+                    return authService.getPermission();
+                }
+            }
+        })
+        .when('/user', {
+            redirectTo: '/user/profile'
+        })
+        .when('/forbidden',{
+            templateUrl: 'app/common/views/unauthorized-access.html'
+        })
+        .otherwise(
+            { redirectTo: '/' }
+        );
 });

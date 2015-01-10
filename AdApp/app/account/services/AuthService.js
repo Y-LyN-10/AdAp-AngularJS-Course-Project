@@ -1,7 +1,7 @@
 'use strict';
 
 app.factory('authService',
-    function ($http, baseServiceUrl) {
+    function ($http, $rootScope, $location, baseServiceUrl) {
         return {
             login: function(userData, success, error) {
                 var request = {
@@ -35,6 +35,24 @@ app.factory('authService',
                 var userObject = sessionStorage['currentUser'];
                 if (userObject) {
                     return JSON.parse(sessionStorage['currentUser']);
+                }
+            },
+
+            getPermission: function (data, success, error) {
+                var currentUser = this.getCurrentUser();
+                var ifPermissionPassed = false;
+
+                if(currentUser != undefined){
+                    ifPermissionPassed = true;
+                }
+
+                if (!ifPermissionPassed) {
+                    $location.path('/forbidden');
+                    $rootScope.$on('$locationChangeSuccess', function (next, current) {
+                        return false;
+                    });
+                } else {
+                    return true;
                 }
             },
 
