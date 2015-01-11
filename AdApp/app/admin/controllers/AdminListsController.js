@@ -52,7 +52,7 @@ app.controller('AdminListsController',
                 categoryId,
                 function success(data) {
                     alert('The category  is successfully deleted');
-                    $location.path('/admin/categories');
+                    $location.path('#/admin/categories');
                 },
                 function error(err) {
                     console.log("This category cannot be deleted", err);
@@ -65,23 +65,23 @@ app.controller('AdminListsController',
                 townId,
                 function success(data) {
                     alert('The town is successfully deleted');
-                    $location.path('/admin/towns');
+                    $location.path('#/admin/towns');
                 },
                 function error(err) {
-                    console.log("This town cannot be deleted", err);
+                    console.log('This town cannot be deleted', err);
                 }
             );
         };
 
-        $scope.deleteUser = function(userId) {
+        $scope.deleteUser = function(username) {
             adminService.deleteUser(
-                userId,
+                username,
                 function success(data) {
-                    alert('The user is successfully deleted');
-                    $location.path('/admin/users');
+                    alert('The user ' + username + ' is successfully deleted');
+                    $location.path('#/admin/users');
                 },
                 function error(err) {
-                    console.log("This user cannot be deleted", err);
+                    console.log('This user ' + username + 'cannot be deleted', err);
                 }
             );
         };

@@ -46,10 +46,10 @@ app.factory('adminService',
                 };
                 $http(request).success(success).error(error);
             },
-            deleteUser: function (id, success, error) {
+            deleteUser: function (username, success, error) {
                 var request = {
                     method: 'DELETE',
-                    url: baseServiceUrl + '/api/admin/Users/' + id,
+                    url: baseServiceUrl + '/api/admin/Users/' + username,
                     headers: authService.getAuthHeaders()
                 };
                 $http(request).success(success).error(error);
